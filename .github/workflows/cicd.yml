@@ -72,12 +72,7 @@ jobs:
     - name: Build Project
       run: mvn package
 
-      
-  sonarqube:
-    runs-on: self-hosted
-    needs: build_project_sonar_scan
-    
-    steps:
+
     - uses: actions/checkout@v4
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
